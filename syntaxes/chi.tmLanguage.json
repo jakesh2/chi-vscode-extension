@@ -1,0 +1,142 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Chi",
+  "scopeName": "source.chi",
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#function-definition" },
+    { "include": "#keywords" },
+    { "include": "#constants" },
+    { "include": "#operators" },
+    { "include": "#builtin-functions" },
+    { "include": "#method-call" },
+    { "include": "#function-call" },
+    { "include": "#types" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.chi",
+          "match": "#.*$"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.chi",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.chi",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.chi",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.chi",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.chi",
+          "match": "\\b-?(?:0[xX][0-9a-fA-F]+|\\d+(?:\\.\\d+)?)\\b"
+        }
+      ]
+    },
+    "function-definition": {
+      "patterns": [
+        {
+          "name": "meta.function.chi",
+          "match": "\\b(panga)\\s+([A-Za-z_][A-Za-z0-9_]*)",
+          "captures": {
+            "1": { "name": "storage.type.function.chi" },
+            "2": { "name": "entity.name.function.chi" }
+          }
+        }
+      ]
+    },
+    "function-call": {
+      "patterns": [
+        {
+          "name": "entity.name.function.call.chi",
+          "match": "\\b[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()"
+        }
+      ]
+    },
+    "method-call": {
+      "patterns": [
+        {
+          "name": "support.function.method.chi",
+          "match": "(?<=\\.)[A-Za-z_][A-Za-z0-9_]*(?=\\s*\\()"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.chi",
+          "match": "\\b(?:ngati|kapena_ngati|sizoona|yesani|bwereza|mu|leka|pitilizani|chita|kuyesera|zakanika|pomaliza|chifukwa|panga|bweza)\\b"
+        },
+        {
+          "name": "storage.type.variable.chi",
+          "match": "\\bika\\b"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.language.chi",
+          "match": "\\b(?:zoona|zabodza|palibe)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.control.comparison.chi",
+          "match": "\\b(?:wafanana|wasiyana|wapambana|wachepa|wafananitsa|wachepetsedwa)\\b"
+        },
+        {
+          "name": "keyword.control.logical.chi",
+          "match": "\\b(?:komanso|kapena|osati)\\b"
+        },
+        {
+          "name": "keyword.operator.symbol.chi",
+          "match": "\\*\\*|==|!=|<=|>=|[+\\-*/%=<>]"
+        }
+      ]
+    },
+    "builtin-functions": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.chi",
+          "match": "\\b(?:onetsa|funsani|mtundu|kukula|mawu|manambala|manambala_olekeza|ndandanda|kaundula|mphamvu|chotsalira|muzu|chopanda|pansi|pamwamba|zungulira|phatikiza|pakatikati|chachikulu|chachingono|sanja|chapakati|yofala|tsegula|werenga_zonse|lemba_mu_file|pezani_file)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "entity.name.type.chi",
+          "match": "\\b(?:mawu|manambala|manambala_olekeza|yankho|palibe_mtundu|ndandanda|kaundula|fayilo|chinthu|vuto_la_nambala|vuto_la_mtundu|vuto_la_ndandanda|cholakwika_kiyi|vuto_la_dzina|vuto_la_kugawa|vuto_la_kukumbukira|vuto_la_fayilo|vuto_la_chilolezo|vuto_lililonse)\\b"
+        }
+      ]
+    }
+  }
+}

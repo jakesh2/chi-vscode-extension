@@ -1,0 +1,158 @@
+{
+  "Print": {
+    "prefix": "onetsa",
+    "body": "onetsa(${1:value})",
+    "description": "Display values"
+  },
+  "Variable": {
+    "prefix": "ika",
+    "body": "ika ${1:name} = ${2:value}",
+    "description": "Declare a variable"
+  },
+  "If": {
+    "prefix": "ngati",
+    "body": [
+      "ngati ${1:condition}:",
+      "    ${2:onetsa(\"zoona\")}"
+    ],
+    "description": "If block"
+  },
+  "If Chita": {
+    "prefix": "ngatichita",
+    "body": [
+      "ngati ${1:condition} chita",
+      "    ${2:onetsa(\"zoona\")}"
+    ],
+    "description": "If block using chita"
+  },
+  "If Else": {
+    "prefix": "ngatisizoona",
+    "body": [
+      "ngati ${1:condition}:",
+      "    ${2:onetsa(\"zoona\")}",
+      "sizoona:",
+      "    ${3:onetsa(\"zabodza\")}"
+    ],
+    "description": "If/else block"
+  },
+  "If Equal": {
+    "prefix": "ngatiwafanana",
+    "body": [
+      "ngati ${1:left} wafanana ${2:right}:",
+      "    ${3:onetsa(\"equal\")}"
+    ],
+    "description": "If comparison using wafanana =="
+  },
+  "If Not Equal": {
+    "prefix": "ngatiwasiyana",
+    "body": [
+      "ngati ${1:left} wasiyana ${2:right}:",
+      "    ${3:onetsa(\"not equal\")}"
+    ],
+    "description": "If comparison using wasiyana !="
+  },
+  "If Greater Than": {
+    "prefix": "ngatiwapambana",
+    "body": [
+      "ngati ${1:left} wapambana ${2:right}:",
+      "    ${3:onetsa(\"greater\")}"
+    ],
+    "description": "If comparison using wapambana >"
+  },
+  "If Less Than": {
+    "prefix": "ngatiwachepa",
+    "body": [
+      "ngati ${1:left} wachepa ${2:right}:",
+      "    ${3:onetsa(\"less\")}"
+    ],
+    "description": "If comparison using wachepa <"
+  },
+  "If Greater Or Equal": {
+    "prefix": "ngatiwafananitsa",
+    "body": [
+      "ngati ${1:left} wafananitsa ${2:right}:",
+      "    ${3:onetsa(\"greater or equal\")}"
+    ],
+    "description": "If comparison using wafananitsa >="
+  },
+  "If Less Or Equal": {
+    "prefix": "ngatiwachepetsedwa",
+    "body": [
+      "ngati ${1:left} wachepetsedwa ${2:right}:",
+      "    ${3:onetsa(\"less or equal\")}"
+    ],
+    "description": "If comparison using wachepetsedwa <="
+  },
+  "Comparison Equal": {
+    "prefix": "wafanana",
+    "body": "wafanana",
+    "description": "Equal to =="
+  },
+  "Comparison Not Equal": {
+    "prefix": "wasiyana",
+    "body": "wasiyana",
+    "description": "Not equal to !="
+  },
+  "Comparison Greater Than": {
+    "prefix": "wapambana",
+    "body": "wapambana",
+    "description": "Greater than >"
+  },
+  "Comparison Less Than": {
+    "prefix": "wachepa",
+    "body": "wachepa",
+    "description": "Less than <"
+  },
+  "Comparison Greater Or Equal": {
+    "prefix": "wafananitsa",
+    "body": "wafananitsa",
+    "description": "Greater than or equal to >="
+  },
+  "Comparison Less Or Equal": {
+    "prefix": "wachepetsedwa",
+    "body": "wachepetsedwa",
+    "description": "Less than or equal to <="
+  },
+  "Elif": {
+    "prefix": "kapena_ngati",
+    "body": [
+      "kapena_ngati ${1:condition}:",
+      "    ${2:onetsa(\"condition\")}"
+    ],
+    "description": "Elif block"
+  },
+  "For Loop": {
+    "prefix": "bwereza",
+    "body": [
+      "bwereza ${1:item} mu ${2:items}:",
+      "    ${3:onetsa($1)}"
+    ],
+    "description": "For loop"
+  },
+  "While Loop": {
+    "prefix": "yesani",
+    "body": [
+      "yesani ${1:condition}:",
+      "    ${2:onetsa(\"loop\")}"
+    ],
+    "description": "While loop"
+  },
+  "Function": {
+    "prefix": "panga",
+    "body": [
+      "panga ${1:name}(${2:params}):",
+      "    ${3:bweza palibe}"
+    ],
+    "description": "Function definition"
+  },
+  "Try Except": {
+    "prefix": "kuyesera",
+    "body": [
+      "kuyesera:",
+      "    ${1:onetsa(\"try\")}",
+      "zakanika vuto_lililonse chifukwa ${2:error}:",
+      "    ${3:onetsa($2)}"
+    ],
+    "description": "Try/except block"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "name": "chi-lang-vscode-extension",
+  "displayName": "Chichewa Programming Language (chi-lang)",
+  "description": "Syntax highlighting, snippets, and IntelliSense support for the Chichewa Programming Language (chi-lang).", 
+  "version": "0.0.1",
+  "publisher": "yazaai",
+  "icon": "icons/logo.PNG",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onLanguage:chi",
+    "onLanguage:python",
+    "onCommand:chi.runCurrentFile",
+    "onCommand:chi.translateCurrentFile",
+    "onCommand:chi.cancelExecution"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "chi",
+        "aliases": [
+          "chi",
+          "chi-lang", 
+          "chichewa",
+          "chichewa programming language" 
+        ],
+        "extensions": [
+          ".chi"
+        ],
+        "icon": {
+          "light": "./icons/logo.PNG",
+          "dark": "./icons/logo.PNG"
+        },
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "chi",
+        "scopeName": "source.chi",
+        "path": "./syntaxes/chi.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "chi",
+        "path": "./snippets/chi.code-snippets"
+      }
+    ],
+    "commands": [
+      {
+        "command": "chi.runCurrentFile",
+        "title": "Chi: Run Current File",
+        "category": "Chi",
+        "enablement": "!chi.isRunning",
+        "icon": "$(play)"
+      },
+      {
+        "command": "chi.translateCurrentFile",
+        "title": "Chi: Translate Current File",
+        "category": "Chi",
+        "enablement": "!chi.isRunning",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "chi.cancelExecution",
+        "title": "Chi: Cancel Execution",
+        "category": "Chi",
+        "enablement": "chi.isRunning",
+        "icon": "$(debug-stop)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "chi.runCurrentFile",
+          "when": "editorLangId == chi && !chi.isRunning",
+          "group": "navigation@-100"
+        },
+        {
+          "command": "chi.translateCurrentFile",
+          "when": "(editorLangId == chi || editorLangId == python) && !chi.isRunning",
+          "group": "navigation@-99"
+        },
+        {
+          "command": "chi.cancelExecution",
+          "when": "(editorLangId == chi || editorLangId == python) && chi.isRunning",
+          "group": "navigation@-98"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "chi.runCurrentFile",
+        "key": "ctrl+alt+r",
+        "when": "editorLangId == chi && !chi.isRunning"
+      }
+    ]
+  },
+  "devDependencies": {}
+}
