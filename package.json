@@ -3,6 +3,7 @@
   "displayName": "Chichewa Programming Language (chi-lang)",
   "description": "Syntax highlighting, snippets, and IntelliSense support for the Chichewa Programming Language (chi-lang).", 
   "version": "0.0.1",
+  "license": "Apache-2.0",
   "publisher": "yazaai",
   "homepage": "https://chi.yazaai.tech/",
   "bugs": {
