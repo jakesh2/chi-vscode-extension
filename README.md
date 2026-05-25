@@ -352,7 +352,7 @@ It is part of the broader YazaAI initiative focused on African-centered educatio
 
 # License
 
-MIT License
+Apache License 2.0
 
 ---
 
