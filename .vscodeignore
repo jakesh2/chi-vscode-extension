@@ -1,0 +1,11 @@
+.vscode/
+.vs/
+node_modules/
+test/
+*.vsix
+*.log
+*.env
+.vscodeignore
+.gitignore
+.github/
+.DS_Store

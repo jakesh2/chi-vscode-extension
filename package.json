@@ -13,6 +13,16 @@
     "url": "https://github.com/jakesh2/chi-vscode-extension"
   },
   "icon": "icons/logo.PNG",
+  "files": [
+    "README.md",
+    "package.json",
+    "icons/**",
+    "syntaxes/**",
+    "snippets/**",
+    "src/**",
+    "language-configuration.json",
+    "LICENSE"
+  ],
   "engines": {
     "vscode": "^1.80.0"
   },
