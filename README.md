@@ -156,21 +156,16 @@ Editor and status bar buttons include:
 
 You must install the ChiLang command line interface separately.
 
-Install using pip:
+Please follow the installation instructions for your operating system on the ChiLang website:
 
-```bash
-pip install chi-lang
-```
+[https://chi.yazaai.tech/](https://chi.yazaai.tech/)
 
-After installation, ensure the `chi` command is available on your system `PATH`.
-
-Verify installation:
-
-```bash
-chi --version
-```
+After installation, follow the website guidance to ensure the `chi` command is available on your system `PATH`.
 
 ---
+
+Note for Windows users: if you already have VS Code installed, the ChiLang Windows installer (or the ChiLang website) may offer to install the VS Code extension alongside ChiLang. The extension can also be installed independently from the Visual Studio Marketplace, the ChiLang website, or on GitHub repository releases.
+
 
 # Supported Commands
 
@@ -384,6 +379,19 @@ Duncan Masiye
 [https://youtube.com/@duncanmasiye7113](https://youtube.com/@duncanmasiye7113)
 
 ---
+
+## Website
+
+[https://chi.yazaai.tech/](https://chi.yazaai.tech/)
+
+## GitHub
+
+[https://github.com/jakesh2/chi-vscode-extension](https://github.com/jakesh2/chi-vscode-extension)
+
+## Publisher
+
+[https://yazaai.tech/](https://yazaai.tech/)
+
 
 # Acknowledgement
 

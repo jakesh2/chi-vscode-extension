@@ -4,6 +4,14 @@
   "description": "Syntax highlighting, snippets, and IntelliSense support for the Chichewa Programming Language (chi-lang).", 
   "version": "0.0.1",
   "publisher": "yazaai",
+  "homepage": "https://chi.yazaai.tech/",
+  "bugs": {
+    "url": "https://github.com/jakesh2/chi-vscode-extension/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakesh2/chi-vscode-extension"
+  },
   "icon": "icons/logo.PNG",
   "engines": {
     "vscode": "^1.80.0"
