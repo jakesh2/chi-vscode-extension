@@ -311,10 +311,6 @@ If the extension cannot find the `chi` command:
 
 1. Ensure ChiLang is installed:
 
-```bash
-pip install chi-lang
-```
-
 2. Verify installation:
 
 ```bash
